@@ -1,0 +1,119 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin:0 ;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   
+}
+
+.players{
+    border:  3px solid #0909ad;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+    font-size: 30px;
+    margin-top: 100px;
+
+}
+.players div{
+    padding: 15px 25px;
+    border-radius: 15px;
+    border: 2px solid aliceblue;
+
+}
+
+.players div.active{
+    background-color: #1e0899;
+    color: aliceblue;
+}
+
+.game-board{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+
+}
+.cell{
+    height: 100px;
+    width: 100px;
+    border: 2px solid #2121a1;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.cell.X{
+    color: red;
+}
+.cell.O{
+    color: rgb(3, 91, 107);
+}
+
+.cell:nth-child(1),.cell:nth-child(2),.cell:nth-child(3){
+   
+    border-top: none;
+
+  }
+.cell:nth-child(7),.cell:nth-child(8),.cell:nth-child(9){
+   
+    border-bottom: none;
+
+  }
+.cell:nth-child(1),.cell:nth-child(4),.cell:nth-child(7){
+   
+    border-left: none;
+
+  }
+.cell:nth-child(3),.cell:nth-child(6),.cell:nth-child(9){
+   
+    border-right: none;
+
+ }
+
+ .result{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+ }
+
+
+ .result h1{
+     color: bisque;
+     font-size: 50px;
+     background:  rgba(80, 46, 231, 0.5); 
+     padding: 15px 25px;
+
+ }
+ .result button{
+    font-size: 26px;
+    background: #ad3d09;
+    color: #fff;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px 25px;
+ }
+ 
+ .inactive{
+    display: none;
+ }
+ .disabled{
+    pointer-events: none;
+ }
